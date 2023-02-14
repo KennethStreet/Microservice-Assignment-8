@@ -19,7 +19,7 @@ def send_message():
     filename = file.filename
     location = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     file.save(location)
-    img = WaveForm.create_wavefile('C:/Users/Kenne/Temp/StarWars3.wav')
+    img = WaveForm.create_wavefile(location)
     with open(img, "rb") as image:
         f = image.read()
         b = bytearray(f)
